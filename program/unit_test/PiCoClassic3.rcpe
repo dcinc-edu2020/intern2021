@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MicomToolCommonProjectFile Version="1.00">
+  <CreatorType Name="CubeSuite+" Version="V8.05.00  [26 Nov 2020]" />
+  <Placeholders>
+    <PlaceholderPrefix>%</PlaceholderPrefix>
+    <PlaceholderPostfix>%</PlaceholderPostfix>
+  </Placeholders>
+  <Project Name="PiCoClassic3" Type="Application">
+    <Files>
+      <Category Name="Application">
+        <Category Name="Recognition">
+          <Path>..\Internship_program\PiCoClassic3\Application\Recognition\recognition_module.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Recognition\recognition_module.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Recognition\distance_recognition.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Recognition\distance_recognition.h</Path>
+        </Category>
+        <Category Name="Judgement">
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\judgement_module.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\judgement_module.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\wall_exist_judgement.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\wall_exist_judgement.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\goal_judgement.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\goal_judgement.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\run_mode_judgement.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Judgment\run_mode_judgement.h</Path>
+        </Category>
+        <Category Name="Control">
+          <Path>..\Internship_program\PiCoClassic3\Application\Control\control_module.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Control\control_module.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Control\tire_control.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\Application\Control\tire_control.h</Path>
+        </Category>
+      </Category>
+      <Category Name="DeviceDriver">
+        <Category Name="Hardware">
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\battery_driver.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\battery_driver.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\buzzer_driver.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\buzzer_driver.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\led_driver.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\led_driver.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\motor_driver.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\motor_driver.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\sensor_driver.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\sensor_driver.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\switch_driver.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware\switch_driver.h</Path>
+        </Category>
+        <Category Name="IO_Port">
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\IO_Port\iodefine.h</Path>
+        </Category>
+        <Category Name="Interrupt">
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt\interrupt.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt\interrupt.h</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt\intprg.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt\vecttbl.c</Path>
+          <Path>..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt\vect.h</Path>
+        </Category>
+        <Path>..\Internship_program\PiCoClassic3\DeviceDriver\dbsct.c</Path>
+        <Path>..\Internship_program\PiCoClassic3\DeviceDriver\stacksct.h</Path>
+      </Category>
+      <Category Name="Platform">
+        <Path>..\Internship_program\PiCoClassic3\Platform\scheduler.c</Path>
+        <Path>..\Internship_program\PiCoClassic3\Platform\scheduler.h</Path>
+        <Path>..\Internship_program\PiCoClassic3\Platform\common.c</Path>
+        <Path>..\Internship_program\PiCoClassic3\Platform\common.h</Path>
+        <Path>..\Internship_program\PiCoClassic3\Platform\init.c</Path>
+        <Path>..\Internship_program\PiCoClassic3\Platform\init.h</Path>
+        <Path>..\Internship_program\PiCoClassic3\Platform\resetprg.c</Path>
+      </Category>
+      <Path>main.c</Path>
+    </Files>
+    <DebugOptions>
+      <DebugTool>Simulator</DebugTool>
+      <ConnectSettings />
+      <DebugToolSettings />
+    </DebugOptions>
+    <Device Series="RX">R5F5631MDxFM</Device>
+    <BuildOptions Name="CC-RX" Version="V3.03.00">
+      <BuildMode Name="DefaultBuild" Active="True">
+        <GeneralOptions>
+          <SimultaneouslyBuild>true</SimultaneouslyBuild>
+        </GeneralOptions>
+        <CompileOptions>
+          <Option>-isa=rxv1</Option>
+          <Option>-fpu</Option>
+          <Option>-lang=c99</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Application\Recognition</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Application\Judgment</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Application\Control</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver\IO_Port</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver\Hardware</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Platform</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver\BuzzerDriver</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver\SensorDriver</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\DeviceDriver\MotorDriver</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Recognition</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Control</Option>
+          <Option>-include=..\Internship_program\PiCoClassic3\Judgment</Option>
+          <Option>-include=PiCoClassic3</Option>
+          <Option>-include=.</Option>
+          <Option>-output=obj</Option>
+          <Option>-debug</Option>
+          <Option>-g_line</Option>
+          <Option>-optimize=0</Option>
+          <Option>-nologo</Option>
+        </CompileOptions>
+        <AssembleOptions>
+          <Option>-isa=rxv1</Option>
+          <Option>-fpu</Option>
+          <Option>-output=%BuildModeName%\%FileLeaf%.obj</Option>
+          <Option>-nologo</Option>
+          <Option>-debug</Option>
+        </AssembleOptions>
+        <LinkOptions>
+          <Option>-output=%BuildModeName%\%ProjectName%.abs</Option>
+          <Option>-list=%BuildModeName%\%ProjectName%.map</Option>
+          <Option>-nooptimize</Option>
+          <Option>-start=B_1,R_1,B_2,R_2,B,R,SU,SI/04,PResetPRG/0FFFC0000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFFC0100,FIXEDVECT/0FFFFFFD0</Option>
+          <Option>-rom=D=R,D_1=R_1,D_2=R_2</Option>
+          <Option>-nologo</Option>
+          <Option>-end</Option>
+          <Option>-input=%BuildModeName%\%ProjectName%.abs</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.mot</Option>
+          <Option>-form=stype</Option>
+          <Option>-exit</Option>
+          <PreLinker>Auto</PreLinker>
+        </LinkOptions>
+        <LibraryGenerateOptions>
+          <Option>-isa=rxv1</Option>
+          <Option>-fpu</Option>
+          <Option>-head=runtime,stdio,stdlib,string,new</Option>
+          <Option>-output=%BuildModeName%\%ProjectName%.lib</Option>
+          <Option>-nologo</Option>
+          <GenerateMode>BuildOptionChanged</GenerateMode>
+        </LibraryGenerateOptions>
+        <LinkOrder>
+          <Path>DefaultBuild\init.obj</Path>
+          <Path>DefaultBuild\scheduler.obj</Path>
+          <Path>DefaultBuild\common.obj</Path>
+          <Path>DefaultBuild\resetprg.obj</Path>
+          <Path>DefaultBuild\dbsct.obj</Path>
+          <Path>DefaultBuild\battery_driver.obj</Path>
+          <Path>DefaultBuild\buzzer_driver.obj</Path>
+          <Path>DefaultBuild\led_driver.obj</Path>
+          <Path>DefaultBuild\motor_driver.obj</Path>
+          <Path>DefaultBuild\sensor_driver.obj</Path>
+          <Path>DefaultBuild\switch_driver.obj</Path>
+          <Path>DefaultBuild\interrupt.obj</Path>
+          <Path>DefaultBuild\intprg.obj</Path>
+          <Path>DefaultBuild\vecttbl.obj</Path>
+          <Path>DefaultBuild\control_module.obj</Path>
+          <Path>DefaultBuild\tire_control.obj</Path>
+          <Path>DefaultBuild\goal_judgement.obj</Path>
+          <Path>DefaultBuild\judgement_module.obj</Path>
+          <Path>DefaultBuild\run_mode_judgement.obj</Path>
+          <Path>DefaultBuild\wall_exist_judgement.obj</Path>
+          <Path>DefaultBuild\distance_recognition.obj</Path>
+          <Path>DefaultBuild\recognition_module.obj</Path>
+          <Path>DefaultBuild\main.obj</Path>
+        </LinkOrder>
+        <CommonOptions>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Application\Recognition</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Application\Judgment</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Application\Control</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver\Interrupt</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver\IO_Port</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver\Hardware</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Platform</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver\BuzzerDriver</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver\SensorDriver</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\DeviceDriver\MotorDriver</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Recognition</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Control</IncludePathForC>
+          <IncludePathForC>..\Internship_program\PiCoClassic3\Judgment</IncludePathForC>
+          <IncludePathForC>PiCoClassic3</IncludePathForC>
+          <IncludePathForC>.</IncludePathForC>
+        </CommonOptions>
+      </BuildMode>
+    </BuildOptions>
+  </Project>
+</MicomToolCommonProjectFile>
