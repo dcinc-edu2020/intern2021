@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>外部テスト</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/kendo.common.min.css">
+    <link rel="stylesheet" href="../css/kendo.rtl.min.css">
+    <link rel="stylesheet" href="../css/kendo.default.min.css">
+    <link rel="stylesheet" href="../css/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="../css/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="../css/docgen.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.rwdImageMaps.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/kendo.all.min.js"></script>
+    <script src="../js/docgen.js"></script>
+  </head>
+  <body>
+    <div id="vertical">
+      <div class="content-function">
+        <div class="function-bar">
+          <div class="pull-left">
+            <div class="history-group history">
+              <div class="btn-group">
+                <button class="btn btn-default btn-xs" onclick="history.back();"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                <button class="btn btn-default btn-xs" onclick="history.forward();"><span class="glyphicon glyphicon-chevron-right"></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pull-right">
+            <div class="viewmodel-group">
+              <a href="page114.html"><button class="btn btn-primary btn-xs" disable="disable">詳細</button></a>
+            </div>
+          </div>
+          <div class="pull-left">
+            <div class="breadcrumb-group">
+              <ul class="breadcrumb">
+                <li><a href="../contents/page0.html">MicroMouse</a></li>
+                <li><a href="../contents/page1.html">MicroMouse</a></li>
+                <li class="active">外部テスト</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-space"></div>
+      <div class="content-area">
+        <p class="pagetitle">
+外部テスト        </p>
+        <div class="hlv4">
+          <div class="hlv5">
+            <p class="title">テストケース&nbsp;</p>
+            <div class="table-responsive">
+              <table style="width: 98%; table-layout: fixed;">
+                <thead>
+                  <tr>
+                    <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
+                    <th style="padding: 6.66px; width: 28.7068965517241%; word-wrap: break-word;" class="columnheader">テスト内容</th>
+                    <th style="padding: 6.66px; width: 71.2931034482759%; word-wrap: break-word;" class="columnheader">合否</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
+                    <td style="padding: 6.66px; width: 28.7068965517241%; word-wrap: break-word;" class="tablecontent">壁に沿って走行すること</td>
+                    <td style="padding: 6.66px; width: 71.2931034482759%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">2. </td>
+                    <td style="padding: 6.66px; width: 28.7068965517241%; word-wrap: break-word;" class="tablecontent">行き止まり（前方・右手・左手全て壁あり）まで進んだ場合、走行を停止すること</td>
+                    <td style="padding: 6.66px; width: 71.2931034482759%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('img[usemap]').rwdImageMaps();
+        $("#vertical").kendoSplitter({
+          orientation: "vertical",
+          panes: [
+            { collapsible: false, resizable: false, scrollable: false, size: "54px"},
+            { collapsible: false, resizable: false, size: "8px"},
+            { collapsible: false, resizable: false }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>
