@@ -63,3 +63,14 @@
 
 * 走行デモ動画
   * https://github.com/dcinc-edu2020/intern2021/tree/master/doc/movie
+
+## 機能開発向け資料
+    |格納ファイルフォルダ名|内容|
+    |-|-|
+    |Z:\Internship_program2|迷路走行用プログラム|
+    |Z:\迷路走行プログラムの手引き.pdf|迷路走行の参考資料|
+
+* 迷路走行用プログラム
+  * https://github.com/dcinc-edu2020/intern2021/tree/master/program/Internship_program2
+* 迷路走行プログラムの手引き
+  * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/迷路走行プログラムの手引き.pdf
