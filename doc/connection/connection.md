@@ -64,6 +64,9 @@
 * 単体テスト用プログラム
   * https://github.com/dcinc-edu2020/intern2021/tree/master/program/unit_test
 
+* 走行デモ動画
+  * https://github.com/dcinc-edu2020/intern2021/tree/master/doc/movie
+
 ## 工夫点をまとめる
 * Googleスライドで1ページ作成  
   スライドのURLはZoomのチャットで連絡します。
