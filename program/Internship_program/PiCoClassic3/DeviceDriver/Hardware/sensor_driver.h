@@ -16,14 +16,14 @@
 /* センサ関連パラメータ */
 #define WAITLOOP_SLED	300				// LEDを光らせてからAD変換を開始するまでの時間稼ぎ用定数
 
-// マウスD パラメータ
-#define REF_SEN_R	1704				// マウスを迷路中央に置いた時のセンサの値
-#define REF_SEN_L	1728				// マウスを迷路中央に置いた時のセンサの値
+// マウスA パラメータ
+#define REF_SEN_R	776				// マウスを迷路中央に置いた時のセンサの値
+#define REF_SEN_L	803				// マウスを迷路中央に置いた時のセンサの値
 
-#define TH_SEN_R	1660				// 壁があるか否かの閾値
-#define TH_SEN_L	1677				// 壁があるか否かの閾値
-#define TH_SEN_FR	1661				// 壁があるか否かの閾値
-#define TH_SEN_FL	1671				// 壁があるか否かの閾値
+#define TH_SEN_R	364				// 壁があるか否かの閾値
+#define TH_SEN_L	294				// 壁があるか否かの閾値
+#define TH_SEN_FR	152				// 壁があるか否かの閾値
+#define TH_SEN_FL	169				// 壁があるか否かの閾値
 
 #define CONTH_SEN_R	TH_SEN_R			// 制御をかけるか否かの閾値
 #define CONTH_SEN_L	TH_SEN_L			// 制御をかけるか否かの閾値
