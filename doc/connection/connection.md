@@ -7,6 +7,11 @@
 ## ビルド用PCへ接続し、プログラムや設計書を編集する
 1. スタートメニューを開き、「リモートデスクトップ接続」と検索して開く。  
   ![リモートデスクトップ接続](img/remote.png)
+
+  * Macの人は、App Storeを開いて、「microsoft remote desktop」で検索してください。  
+    2つ表示されるので、どちらかを「インストール」してください。  
+  ![Macリモートデスクトップ接続](img/mac_remote.png)
+
 1. チームごとに、決められたコンピュータに対して接続する。  
   ![リモートデスクトップ接続2](img/remote2.png)  
   __※接続先アドレスはZoomのチャットで連絡します。__
@@ -30,17 +35,19 @@
 1. Slackを起動する。  
   Zoomのブレークアウトルームに移動後の、社員との連絡手段として使用します。  
   アカウント・ワークスペース設定済みとなっているはずです。
-1. デスクトップにある「インターン」のリンクを開く。  
+1. デスクトップにある「Z」のリンクを開く。  
     |格納ファイルフォルダ名|内容|
     |-|-|
     |Z:\Internship_program|マイクロマウス用プログラム|
     |Z:\unit_test|単体テスト用プログラム|
     |Z:\設計書\MicroMouse.iproj|マイクロマウス用プログラムの設計書|
     |Z:\マイクロマウス開発手順書.pdf|プログラムのビルド手順書|
+    |Z:\マイクロマウス単体テスト手順書.pdf|単体テストの手順書|
     |Z:\工夫点まとめスライド(チームn)|発表スライドへのショートカット|
     |Z:\接続手順書|本資料へのショートカット|
+    |Z:\迷路走行プログラムの手引き.pdf|機能開発の参考資料|
 1. 「マイクロマウス開発手順書.pdf」を開く
-1. 手順書を参考に、プログラムのビルドできる(p7まで実施できる)ことを確認し、プログラム開発に入る。
+1. 手順書を参考に、プログラムがビルドできる(p7まで実施できる)ことを確認し、プログラム開発に入る。
 * (参考)PCには以下ツールが入っています。
   * マイクロマウス用コンパイラ(CS+)・・・マイクロマウス用プログラムのコンパイラ
   * 次世代設計ツール NextDesign (デンソークリエイト製ツール！)・・・設計書のエディタ
@@ -50,8 +57,12 @@
   * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/マイクロマウス開発手順書.pdf
 * 設計書
   * https://dcinc-edu2020.github.io/intern2021/doc/design/index.html
-* ベースコード
-  * https://github.com/dcinc-edu2020/intern2021/tree/master/program
+* マイクロマウス用プログラム
+  * https://github.com/dcinc-edu2020/intern2021/tree/master/program/Internship_program
+* 単体テスト手順書
+  * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/マイクロマウス単体テスト手順書.pdf
+* 単体テスト用プログラム
+  * https://github.com/dcinc-edu2020/intern2021/tree/master/program/unit_test
 
 ## 工夫点をまとめる
 * Googleスライドで1ページ作成  
