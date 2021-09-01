@@ -3,6 +3,7 @@
   - [開発用PCへ接続する](#開発用pcへ接続する)
   - [開発を始める](#開発を始める)
   - [開発用PC以外からプログラムや設計書を参照する(読み取り専用)](#開発用pc以外からプログラムや設計書を参照する読み取り専用)
+  - [迷路走行向け資料](#迷路走行向け資料)
 
 ## 開発用PCへ接続する
 <details>
@@ -111,6 +112,12 @@
   |[Z:\2_マイクロマウス単体テスト手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス単体テスト手順書.pdf)|2 単体テスト|単体テストの手順書|
   |[Z:\2_unit_test](https://github.com/dcincedu/intern/tree/master/program/unit_test)|2 単体テスト|単体テスト用プログラム|
 
-
 * 走行デモ動画
   * https://github.com/dcincedu/intern/tree/master/doc/movie
+
+## 迷路走行向け資料
+
+|格納ファイルフォルダ名|用途|内容|
+|-|-|-|
+|[Z:\3_Internship_program2](https://github.com/dcincedu/intern/tree/master/program/Internship_program2)|3 迷路走行|迷路走行用プログラム|
+|[Z:\3_迷路走行プログラムの手引き.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/迷路走行プログラムの手引き.pdf)|3 迷路走行|迷路走行の参考資料|

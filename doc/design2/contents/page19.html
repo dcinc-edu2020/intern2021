@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>認知</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/kendo.common.min.css">
+    <link rel="stylesheet" href="../css/kendo.rtl.min.css">
+    <link rel="stylesheet" href="../css/kendo.default.min.css">
+    <link rel="stylesheet" href="../css/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="../css/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="../css/docgen.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.rwdImageMaps.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/kendo.all.min.js"></script>
+    <script src="../js/docgen.js"></script>
+  </head>
+  <body>
+    <div id="vertical">
+      <div class="content-function">
+        <div class="function-bar">
+          <div class="pull-left">
+            <div class="history-group history">
+              <div class="btn-group">
+                <button class="btn btn-default btn-xs" onclick="history.back();"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                <button class="btn btn-default btn-xs" onclick="history.forward();"><span class="glyphicon glyphicon-chevron-right"></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pull-right">
+            <div class="viewmodel-group">
+              <a href="page19.html"><button class="btn btn-primary btn-xs" disable="disable">詳細</button></a>
+              <a href="page19b.html"><button class="btn btn-default btn-xs">関連図</button></a>
+            </div>
+          </div>
+          <div class="pull-left">
+            <div class="breadcrumb-group">
+              <ul class="breadcrumb">
+                <li><a href="../contents/page0.html">MicroMouse</a></li>
+                <li><a href="../contents/page1.html">MicroMouse</a></li>
+                <li><a href="../contents/page17.html">ソフト構造</a></li>
+                <li><a href="../contents/page18.html">Application</a></li>
+                <li class="active">認知</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-space"></div>
+      <div class="content-area">
+        <p class="pagetitle">
+認知        </p>
+        <div class="hlv6">
+          <div class="hlv7">
+            <p class="title">説明&nbsp;</p>
+            <p>外部の情報をハードウェアドライバから取得し、ソフトウェア制御で扱える論理的な値に変換する</p>
+          </div>
+          <div class="hlv7">
+            <p class="title">コンポーネント&nbsp;</p>
+            <div class="table-responsive">
+              <table style="width: 98%; table-layout: fixed;">
+                <thead>
+                  <tr>
+                    <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
+                    <th style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="columnheader">名前</th>
+                    <th style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="columnheader">説明</th>
+                    <th style="padding: 6.66px; width: 82.75862068965517%; word-wrap: break-word;" class="columnheader">コンポーネント名</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent"><a href="page20.html">迷路壁情報</a></td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent">迷路全体の壁がどこにあるかの情報を持つ</td>
+                    <td style="padding: 6.66px; width: 82.75862068965517%; word-wrap: break-word;" class="tablecontent">maze_data</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">2. </td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent"><a href="page24.html">外界明るさ計測</a></td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent">外界の明るさを計測する</td>
+                    <td style="padding: 6.66px; width: 82.75862068965517%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">3. </td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent"><a href="page26.html">ヘッドライト点消灯要求切替検出</a></td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent">運転者が指定するライト制御要求を受け付ける</td>
+                    <td style="padding: 6.66px; width: 82.75862068965517%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">4. </td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent"><a href="page28.html">ドライブモード切替検出</a></td>
+                    <td style="padding: 6.66px; width: 8.620689655172415%; word-wrap: break-word;" class="tablecontent">運転者が指定するドライブモードを受け付ける</td>
+                    <td style="padding: 6.66px; width: 82.75862068965517%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('img[usemap]').rwdImageMaps();
+        $("#vertical").kendoSplitter({
+          orientation: "vertical",
+          panes: [
+            { collapsible: false, resizable: false, scrollable: false, size: "54px"},
+            { collapsible: false, resizable: false, size: "8px"},
+            { collapsible: false, resizable: false }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>
