@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <base href="..">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ゴール位置Y座標</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/kendo.common.min.css">
+    <link rel="stylesheet" href="css/kendo.rtl.min.css">
+    <link rel="stylesheet" href="css/kendo.default.min.css">
+    <link rel="stylesheet" href="css/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="css/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="css/dtree.css">
+    <link rel="stylesheet" href="css/docgen.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script src="js/dtree.js"></script>
+    <script src="js/docgen.js"></script>
+    <script>
+      if (window.parent != window) {
+        window.location.href = 'contents/page61.html';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="indio-splitter">
+      <div class="top-bar-area">
+        <div class="top-bar">
+          <div class="top-bar-title">ゴール位置Y座標</div>
+          <div class="top-bar-description">powered by Next Design</div>
+        </div>
+      </div>
+      <div id="horizontal">
+        <div class="modelbrowser-backcolor">
+          <div class="modelbrowser-title">ナビゲーション</div>
+          <div class="dtree-pane">
+            <div class="dtree">
+              <script src="js/modelbrowsertree.js"></script>
+            </div>
+          </div>
+        </div>
+        <div id="vertical">
+          <div>
+            <iframe class="iframe-style" id="content" name="content" scrolling="no" frameborder="no" src="contents/page61.html"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('img[usemap]').rwdImageMaps();
+        $("#indio-splitter").kendoSplitter({
+          orientation: "vertical",
+          panes: [
+            { collapsible: false, resizable: false, size: "54px" },
+            { collapsible: false, resizable: false }
+          ]
+        });
+        $("#horizontal").kendoSplitter({
+          panes: [
+            { collapsible: true, size: "300px" },
+            { collapsible: false }
+          ]
+        });
+        $("#vertical").kendoSplitter({
+          orientation: "vertical",
+          panes: [
+            { collapsible: false, resizable: false, size: "60px" },
+            { collapsible: false }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>
