@@ -68,9 +68,12 @@
     |格納ファイルフォルダ名|内容|
     |-|-|
     |Z:\Internship_program2|迷路走行用プログラム|
+    |Z:\設計書(迷路走行)\MicroMouse.iproj|迷路走行用プログラムの設計書|
     |Z:\迷路走行プログラムの手引き.pdf|迷路走行の参考資料|
 
 * 迷路走行用プログラム
   * https://github.com/dcinc-edu2020/intern2021/tree/master/program/Internship_program2
+* 迷路走行用プログラム設計書
+  * https://dcinc-edu2020.github.io/intern2021/doc/design2/index.html
 * 迷路走行プログラムの手引き
   * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/迷路走行プログラムの手引き.pdf
