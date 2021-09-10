@@ -81,3 +81,5 @@
   * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/迷路走行プログラムの手引き.pdf
 * 迷路走行プログラムの手引き(ちょっと詳細)
   * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/迷路走行プログラムの手引き(ちょっと詳細).pdf
+* 迷路走行プログラムの手引き(ちょっと詳細)ver1.1
+  * https://github.com/dcinc-edu2020/intern2021/blob/master/doc/build/迷路走行プログラムの手引き(ちょっと詳細)ver1.1.pdf
