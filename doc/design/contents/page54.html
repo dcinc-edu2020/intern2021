@@ -57,8 +57,35 @@
 ゴール判定        </p>
         <div class="hlv8">
           <div class="hlv9">
-            <p class="title">説明&nbsp;</p>
-            <p>(未設定)</p>
+            <p class="title">関数名&nbsp;</p>
+            <p>judgement_goal</p>
+          </div>
+          <div class="hlv9">
+            <p class="title">処理概要&nbsp;</p>
+            <p>3方に壁がある場合、ゴールと判断する</p>
+          </div>
+          <div class="hlv9">
+            <p class="title">処理仕様&nbsp;</p>
+            <div class="table-responsive">
+              <table style="width: 98%; table-layout: fixed;">
+                <thead>
+                  <tr>
+                    <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
+                    <th style="padding: 6.66px; width: 100%; word-wrap: break-word;" class="columnheader">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
+                    <td style="padding: 6.66px; width: 100%; word-wrap: break-word;" class="tablecontent">前壁有無・左壁有無・右壁有無が全て有の場合、ゴール判定結果を&quot;ゴール&quot;にする。</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6.66px; width: 40px;" class="rowheader">2. </td>
+                    <td style="padding: 6.66px; width: 100%; word-wrap: break-word;" class="tablecontent">前壁有無・左壁有無・右壁有無が一つでも無の場合、ゴール判定結果を&quot;ゴールしていない&quot;にする。</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
