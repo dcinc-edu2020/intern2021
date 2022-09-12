@@ -17,11 +17,7 @@
   __※接続先アドレスはZoomのチャットで連絡します。__
     |チーム|コンピューター|
     |-|-|
-    |1|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |2|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |3|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |4|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |5|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
+    |A~E|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
 
 1. 以下ユーザー名とパスワードを入力してOKします。  
    自分のアカウント名がすでに入っている場合は、下のほうにある「その他」→「別のアカウントを使用する」を押してください。
@@ -54,11 +50,7 @@
   __※接続先アドレスはZoomのチャットで連絡します。__
     |チーム|PC name|
     |-|-|
-    |1|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |2|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |3|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |4|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
-    |5|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
+    |A~E|ml-lab-XXX-XXX-XXX.japaneast.cloudapp.azure.com:XXX|
 
     ![Macリモートデスクトップ接続4](img/mac_remote4.png)
 
@@ -98,12 +90,12 @@
 * その他の格納されているファイルは以下です。
     |格納ファイルフォルダ名|用途|内容|
     |-|-|-|
-    |Z:\接続手順書|接続|本資料へのショートカット|
-    |Z:\マイクロマウス開発手順書.pdf|開発|プログラムのビルド手順書|
-    |Z:\設計書\MicroMouse.iproj|開発|マイクロマウス用プログラムの設計書|
-    |Z:\Internship_program|開発|マイクロマウス用プログラム|
-    |Z:\マイクロマウス単体テスト手順書.pdf|単体テスト|単体テストの手順書|
-    |Z:\unit_test|単体テスト|単体テスト用プログラム|
+    |Z:\0_接続手順書|0 接続|本資料へのショートカット|
+    |Z:\1_マイクロマウス開発手順書.pdf|1 開発|プログラムの開発の流れ|
+    |Z:\1_設計書\MicroMouse.iproj|1 開発|マイクロマウス用プログラムの設計書|
+    |Z:\1_Internship_program|1 開発|マイクロマウス用プログラム|
+    |Z:\2_マイクロマウス単体テスト手順書.pdf|2 単体テスト|単体テストの手順書|
+    |Z:\2_unit_test|2 単体テスト|単体テスト用プログラム|
 
 * (参考)PCには以下ツールが入っています。
   * マイクロマウス用コンパイラ(CS+)・・・マイクロマウス用プログラムのコンパイラ
