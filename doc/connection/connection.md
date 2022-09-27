@@ -90,7 +90,6 @@
 * その他の格納されているファイルは以下です。
     |格納ファイルフォルダ名|用途|内容|
     |-|-|-|
-    |Z:\0_接続手順書|0 接続|本資料へのショートカット|
     |Z:\1_マイクロマウス開発手順書.pdf|1 開発|プログラムの開発の流れ|
     |Z:\1_設計書\MicroMouse.iproj|1 開発|マイクロマウス用プログラムの設計書|
     |Z:\1_Internship_program|1 開発|マイクロマウス用プログラム|
@@ -104,16 +103,14 @@
 ## 開発用PC以外からプログラムや設計書を参照する(読み取り専用)
 以下のリンクは、開発用PC以外(各自のPC)からでも開くことができます。
 
-* 開発手順書
-  * https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス開発手順書.pdf
-* 設計書
-  * https://dcincedu.github.io/intern/doc/design/index.html
-* マイクロマウス用プログラム
-  * https://github.com/dcincedu/intern/tree/master/program/Internship_program
-* 単体テスト手順書
-  * https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス単体テスト手順書.pdf
-* 単体テスト用プログラム
-  * https://github.com/dcincedu/intern/tree/master/program/unit_test
+  |格納ファイルフォルダ名|用途|内容|
+  |-|-|-|
+  |[Z:\1_マイクロマウス開発手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス開発手順書.pdf)|1 開発|プログラムの開発の流れ|
+  |[Z:\1_設計書\MicroMouse.iproj](https://dcincedu.github.io/intern/doc/design/index.html)|1 開発|マイクロマウス用プログラムの設計書|
+  |[Z:\1_Internship_program](https://github.com/dcincedu/intern/tree/master/program/Internship_program)|1 開発|マイクロマウス用プログラム|
+  |[Z:\2_マイクロマウス単体テスト手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス単体テスト手順書.pdf)|2 単体テスト|単体テストの手順書|
+  |[Z:\2_unit_test](https://github.com/dcincedu/intern/tree/master/program/unit_test)|2 単体テスト|単体テスト用プログラム|
+
 
 * 走行デモ動画
   * https://github.com/dcincedu/intern/tree/master/doc/movie
