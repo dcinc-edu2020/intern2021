@@ -206,6 +206,7 @@
   |[Z:\3-1_マップ作成走行プログラムの手引き.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/3-1_マップ作成走行プログラムの手引き.pdf)|3 マップ作成走行|マップ作成走行プログラムの開発の流れ|
   |[Z:\3_設計書\MicroMouse3.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse3/index.html)|3 マップ作成走行|マップ作成走行プログラムの設計書(未完成)|
   |[Z:\3_Internship_program3](https://github.com/dcincedu/intern/tree/master/program/3_Internship_program3)|3 マップ作成走行|マップ作成走行用プログラム|
+  |[Z:\3-2_マップ作成走行の流れ.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/3-2_マップ作成走行の流れ.pdf)|3 マップ作成走行|マップ作成走行プログラム概要|
   
 
 * 走行デモ動画
