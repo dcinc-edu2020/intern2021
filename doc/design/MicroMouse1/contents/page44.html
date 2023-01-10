@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>処理仕様</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/kendo.common.min.css">
+    <link rel="stylesheet" href="../css/kendo.rtl.min.css">
+    <link rel="stylesheet" href="../css/kendo.default.min.css">
+    <link rel="stylesheet" href="../css/kendo.dataviz.min.css">
+    <link rel="stylesheet" href="../css/kendo.dataviz.default.min.css">
+    <link rel="stylesheet" href="../css/docgen.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.rwdImageMaps.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/kendo.all.min.js"></script>
+    <script src="../js/docgen.js"></script>
+  </head>
+  <body>
+    <div id="vertical">
+      <div class="content-function">
+        <div class="function-bar">
+          <div class="pull-left">
+            <div class="history-group history">
+              <div class="btn-group">
+                <button class="btn btn-default btn-xs" onclick="history.back();"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                <button class="btn btn-default btn-xs" onclick="history.forward();"><span class="glyphicon glyphicon-chevron-right"></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="pull-right">
+            <div class="viewmodel-group">
+              <a href="page44.html"><button class="btn btn-primary btn-xs" disable="disable">詳細</button></a>
+            </div>
+          </div>
+          <div class="pull-left">
+            <div class="breadcrumb-group">
+              <ul class="breadcrumb">
+                <li><a href="../contents/page0.html">MicroMouse1</a></li>
+                <li><a href="../contents/page1.html">MicroMouse1</a></li>
+                <li><a href="../contents/page17.html">ソフト構造</a></li>
+                <li><a href="../contents/page18.html">アプリケーション</a></li>
+                <li><a href="../contents/page37.html">判断</a></li>
+                <li><a href="../contents/page38.html">判断タスク</a></li>
+                <li><a href="../contents/page39.html">判断タスク</a></li>
+                <li class="active">処理仕様</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-space"></div>
+      <div class="content-area">
+        <p class="pagetitle">
+処理仕様        </p>
+        <div class="hlv9">
+          <div class="hlv9">
+            <p class="title">内容&nbsp;</p>
+            <p>走行指示決定を呼び出す。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('img[usemap]').rwdImageMaps();
+        $("#vertical").kendoSplitter({
+          orientation: "vertical",
+          panes: [
+            { collapsible: false, resizable: false, scrollable: false, size: "54px"},
+            { collapsible: false, resizable: false, size: "8px"},
+            { collapsible: false, resizable: false }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>

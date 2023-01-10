@@ -178,9 +178,9 @@
   アカウント・ワークスペース設定済みとなっています。
 
 1. 開発用PCのデスクトップにある「Z」のリンクを開き、  
-   「マイクロマウス開発手順書.pdf」を開きます。  
+   「1_マイクロマウス開発手順書.pdf」を開きます。  
 
-1. 手順書を参考に、プログラムがビルドできる(p7まで実施できる)ことを確認し、プログラム開発に入りましょう。
+1. 手順書を参考に、プログラム開発に入りましょう。
 
 * その他の格納されているファイルは以下です。
     |格納ファイルフォルダ名|用途|内容|
@@ -200,12 +200,11 @@
 
   |格納ファイルフォルダ名|用途|内容|
   |-|-|-|
-  |[Z:\1_マイクロマウス開発手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス開発手順書.pdf)|1 開発|プログラムの開発の流れ|
-  |[Z:\1_設計書\MicroMouse.iproj](https://dcincedu.github.io/intern/doc/design/index.html)|1 開発|マイクロマウス用プログラムの設計書|
+  |[Z:\1-1_マイクロマウス開発手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-1_マイクロマウス開発手順書.pdf)|1 開発|プログラムの開発の流れ|
+  |[Z:\1_設計書\MicroMouse1.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse1/index.html)|1 開発|マイクロマウス用プログラムの設計書|
   |[Z:\1_Internship_program](https://github.com/dcincedu/intern/tree/master/program/Internship_program)|1 開発|マイクロマウス用プログラム|
-  |[Z:\2_マイクロマウス単体テスト手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/マイクロマウス単体テスト手順書.pdf)|2 単体テスト|単体テストの手順書|
-  |[Z:\2_unit_test](https://github.com/dcincedu/intern/tree/master/program/unit_test)|2 単体テスト|単体テスト用プログラム|
-
+  |[Z:\1-2_ゴール時停止で使う主なC言語文法.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-2_ゴール時停止で使う主なC言語文法.pdf)|1 開発|ごく簡単なC言語文法資料|
+  
 
 * 走行デモ動画
   * https://github.com/dcincedu/intern/tree/master/doc/movie
