@@ -192,10 +192,10 @@
 
   |格納ファイルフォルダ名|用途|内容|
   |-|-|-|
-  |[Z:\1-1_マイクロマウス開発手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-1_マイクロマウス開発手順書.pdf)|1 開発|プログラムの開発の流れ|
-  |[Z:\1_設計書\MicroMouse1.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse1/index.html)|1 開発|マイクロマウス用プログラムの設計書|
-  |[Z:\1_Internship_program](https://github.com/dcincedu/intern/tree/master/program/1_Internship_program)|1 開発|マイクロマウス用プログラム|
-  |[Z:\1-2_ゴール時停止で使う主なC言語文法.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-2_ゴール時停止で使う主なC言語文法.pdf)|1 開発|ごく簡単なC言語文法資料|
+  |[Z:\1-1_マイクロマウス開発手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-1_マイクロマウス開発手順書.pdf)|1 ゴール停止|プログラムの開発の流れ|
+  |[Z:\1_設計書\MicroMouse1.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse1/index.html)|1 ゴール停止|マイクロマウス用プログラムの設計書|
+  |[Z:\1_Internship_program](https://github.com/dcincedu/intern/tree/master/program/1_Internship_program)|1 ゴール停止|マイクロマウス用プログラム|
+  |[Z:\1-2_ゴール時停止で使う主なC言語文法.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-2_ゴール時停止で使う主なC言語文法.pdf)|1 ゴール停止|ごく簡単なC言語文法資料|
   
 
 * 走行デモ動画
