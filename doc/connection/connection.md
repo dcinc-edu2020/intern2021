@@ -198,6 +198,12 @@
   |[Z:\1_設計書\MicroMouse1.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse1/index.html)|1 ゴール停止|マイクロマウス用プログラムの設計書|
   |[Z:\1_Internship_program](https://github.com/dcincedu/intern/tree/master/program/1_Internship_program)|1 ゴール停止|マイクロマウス用プログラム|
   |[Z:\1-2_ゴール時停止で使う主なC言語文法.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-2_ゴール時停止で使う主なC言語文法.pdf)|1 ゴール停止|ごく簡単なC言語文法資料|
+  |[Z:\1-3_設計書の読み方ガイド.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-3_設計書の読み方ガイド.pdf)|1 ゴール停止|ゴール停止プログラムの変更完了までの設計書の読み方|
+  ||||
+  |[Z:\2-1_迷路走行プログラムの手引き.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/2-1_迷路走行プログラムの手引き.pdf)|2 迷路走行|迷路走行プログラムの開発の流れ|
+  |[Z:\2_設計書\MicroMouse2.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse2/index.html)|2 迷路走行|迷路走行プログラムの設計書|
+  |[Z:\2_Internship_program](https://github.com/dcincedu/intern/tree/master/program/2_Internship_program2)|2 迷路走行|迷路走行用プログラム|
+  |[Z:\2-2_迷路走行プログラムで使う主なC言語文法.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/2-2_迷路走行プログラムで使う主なC言語文法.pdf)|2 迷路走行|ごく簡単なC言語文法資料|
   
 
 * 走行デモ動画
