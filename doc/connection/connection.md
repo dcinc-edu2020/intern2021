@@ -53,7 +53,7 @@
   「サーバー名」を以下の通り入力し、「OK」をクリックします。  
     |項目|入力|
     |-|-|
-    |サーバー名|__※ゲートウェイ名はZoomのチャットで連絡します。__|  
+    |サーバー名|__※サーバー名(=ゲートウェイ名)はZoomのチャットで連絡します。__|  
 
     ![リモートデスクトップ接続2](img/remote4.png)
 
@@ -61,7 +61,7 @@
   「コンピューター」と「ユーザー名」を以下の通り入力し、「接続」をクリックします。  
     |項目|入力|
     |-|-|
-    |コンピューター|__※開発PC名はZoomのチャットで連絡します。__|
+    |コンピューター|__※コンピューター名(=開発PC名)はZoomのチャットで連絡します。__|
     |ユーザー名|__※ユーザ名はZoomのチャットで連絡します。__|  
 
     ![リモートデスクトップ接続2](img/remote5.png)
@@ -127,8 +127,8 @@
    「Add」をクリックします。  
     |項目|入力|
     |-|-|
-    |Username|__※ログインユーザ名はZoomのチャットで連絡します。__|
-    |Password|__※パスワードはZoomのチャットで連絡します。__|
+    |Username|__※Username(=ユーザ名)はZoomのチャットで連絡します。__|
+    |Password|__※Password(=パスワード)はZoomのチャットで連絡します。__|
     |Friendly name|dc intern|  
 
     ![Macリモートデスクトップ接続](img/mac_remote_g3.png)
@@ -138,7 +138,7 @@
 
     |項目|入力|
     |-|-|
-    |Gateway name|__※ゲートウェイ名はZoomのチャットで連絡します。__|
+    |Gateway name|__※Gateway name(=ゲートウェイ名)はZoomのチャットで連絡します。__|
     |Friendly name|dc intern|
     |User account|dc intern|
 
@@ -149,7 +149,7 @@
 
     |項目|入力|
     |-|-|
-    |PC name|__※開発PC名はZoomのチャットで連絡します。__|
+    |PC name|__※PC name(=開発PC名)はZoomのチャットで連絡します。__|
     |User account|dc intern|
     |Friendly name|dc intern|
     |Gateway|dc intern|
