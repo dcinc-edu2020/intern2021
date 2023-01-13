@@ -5,8 +5,8 @@
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "iodefine.h"
-#include "buzzer_driver.h"
+#include "DeviceDriver/Core/iodefine.h"
+#include "DeviceDriver/Hardware/buzzer_driver.h"
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
@@ -31,8 +31,8 @@ void set_buzzer_freq(unsigned short frequency)
 {
 	// ブザーの発振周波数を算出して設定
 	MTU0.TGRB = (unsigned short)(12000000 / (frequency));
-	MTU0.TGRA = (unsigned short)(6000000  / (frequency));	
-	
+	MTU0.TGRA = (unsigned short)(6000000  / (frequency));
+
 	return;
 }
 
@@ -48,7 +48,7 @@ void buzzer_on(void)
 {
 	// ブザーの発振を開始
 	PORTB.PMR.BIT.B3  = BZ_ON;
-	MTU.TSTR.BIT.CST0 = BZ_ON;	
+	MTU.TSTR.BIT.CST0 = BZ_ON;
 
 	return;
 }
@@ -66,6 +66,6 @@ void buzzer_off(void)
 	//ブザーの発振を停止
 	PORTB.PMR.BIT.B3  = BZ_OFF;
 	MTU.TSTR.BIT.CST0 = BZ_OFF;
-	
+
 	return;
 }

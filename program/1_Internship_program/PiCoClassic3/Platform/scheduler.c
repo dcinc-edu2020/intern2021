@@ -5,42 +5,42 @@
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "recognition_module.h"
-#include "judgement_module.h"
-#include "control_module.h"
-#include "tire_control.h"
-#include "motor_driver.h"
-#include "scheduler.h"
+#include "Application/Recognition/recognition_module.h"
+#include "Application/Judgement/judgement_module.h"
+#include "Application/Control/control_module.h"
+#include "Platform/scheduler.h"
 
 /*------------------------------------------------------------------------------*/
 /* Function Definitions								*/
 /*------------------------------------------------------------------------------*/
 
 /*==============================================================================*/
-/* 定期処理						                        */
+/* 定期処理									*/
 /* 										*/
 /* ソフトウェアのタスクを実行する						*/
 /* ---------------------------------------------------------------------------- */
 /*  Arguments:		-							*/
-/*  Return   :         	-							*/
+/*  Return   :		-							*/
 /*==============================================================================*/
 void task_routine(void)
 {
-	/* まずは、スタート位置から0.5区画進む */
-	run_straight(HALF_SECTION, DEFAULT_SPEED);
-	
-	/* 以降、1区画ごとに壁の有無を判定しながら空いている方向へ進む */
+	/* 初期化 */
+	init_recognition();
+	init_judgement();
+	init_control();
+
+	/* 1区画ごとに壁の有無を判定しながら進む */
 	while(1)
 	{
 		/* 認知 */
 		recognition();
-		
+
 		/* 判断 */
 		judgement();
-		
+
 		/* 制御 */
 		control();
 	}
-	
+
 	return;
 }

@@ -1,17 +1,17 @@
 /*==============================================================================*/
-/* Common Header File								*/
+/* Timer Driver Header File                                                     */
 /*==============================================================================*/
-#ifndef _COMMON_H
-#define _COMMON_H
+#ifndef TIMER_DRIVER_H
+#define TIMER_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
-/* Global Variable								*/
+/* Global Variable                                                              */
 /*------------------------------------------------------------------------------*/
-extern volatile unsigned int timer;	// プログラム本体内のタイマー
+extern volatile unsigned int timer;     // プログラム本体内のタイマー
 
 /*------------------------------------------------------------------------------*/
-/* Function Prototype								*/
+/* Function Prototype                                                           */
 /*------------------------------------------------------------------------------*/
-void wait_ms(int wate_time);		// 待ち時間生成
+void int_periodic_timer(void);                          // 1msタイマー用割り込み
 
 #endif

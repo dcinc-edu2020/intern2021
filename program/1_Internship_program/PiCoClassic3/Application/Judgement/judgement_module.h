@@ -1,12 +1,13 @@
 /*==============================================================================*/
-/* Scheduler Header File							*/
+/* Judgement Module Header File							*/
 /*==============================================================================*/
-#ifndef SCHEDULER_H
-#define SCHEDULER_H
+#ifndef JUDGEMENT_MODULE_H
+#define JUDGEMENT_MODULE_H
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void task_routine(void);					// íËä˙èàóù
+void init_judgement(void);	// èâä˙âª
+void judgement(void);		// îªíf
 
 #endif

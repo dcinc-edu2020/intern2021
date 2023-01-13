@@ -1,8 +1,8 @@
 /*==============================================================================*/
 /* Motor Driver Header File							*/
 /*==============================================================================*/
-#ifndef _MOTOR_DRIVER_H
-#define _MOTOR_DRIVER_H
+#ifndef MOTOR_DRIVER_H
+#define MOTOR_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
@@ -34,17 +34,6 @@
 #define SPEED2GREG(v)	(7500/(((v)/TIRE_CIRCUIT)))		//スピードからジェネラルレジスタの値を計算
 
 /*------------------------------------------------------------------------------*/
-/* Variable Externs								*/
-/*------------------------------------------------------------------------------*/
-extern	unsigned int	step_r;			// 右モーターステップ数(割り込み内でカウントアップ)
-extern	unsigned int	step_l;			// 左モーターステップ数(割り込み内でカウントアップ)
-extern	float		accel;			// 加速度(設定値→符号なし)
-extern	float		r_accel;		// 加速度(実際の値→符号あり)
-extern	float		max_speed;		// 最高速度(設定値)
-extern	float		min_speed;		// 最低速度(設定値)
-extern	float		speed;			// 速度(現在の値)
-
-/*------------------------------------------------------------------------------*/
 /* Function prototype								*/
 /*------------------------------------------------------------------------------*/
 void init_motor(void);						// モーター制御用パラメータ初期化
@@ -57,12 +46,15 @@ void start_motor_control(void);					// モーター回転開始
 void stop_motor_control(void);					// モーター回転停止
 unsigned int get_motor_step(float distance);			// 走行ステップ数取得
 unsigned int get_mileage_step(int motor_kind);			// モーター走行距離取得
-void set_current_speed(float set_speed);			// 現在速度設定
+float get_current_speed(void);					// 現在速度取得
 void set_max_speed(float set_speed);				// 最高速度設定
 void set_min_speed(float set_speed);				// 最低速度設定
 void control_accel(int mileage, float target_speed);		// 加速度設定
 void control_accel_turn(int mileage, float target_speed);	// 加速度設定（旋回）
 void set_accel(float set_accel);				// 加速度設定
 void set_r_accel(float set_accel);				// 加速度設定
+void int_periodic_motor(void);                          // 姿勢制御用割り込み
+void int_mot_r(void);                           // 右モーターステップカウント割り込み
+void int_mot_l(void);                           // 左モーターステップカウント割り込み
 
 #endif

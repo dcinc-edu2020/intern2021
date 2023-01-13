@@ -5,13 +5,13 @@
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "sensor_driver.h"
-#include "distance_recognition.h"
+#include "DeviceDriver/Hardware/sensor_driver.h"
+#include "Application/Recognition/distance_recognition.h"
 
 /*------------------------------------------------------------------------------*/
 /* Global Variable								*/
 /*------------------------------------------------------------------------------*/
-int rightside_dictance;			// 右側物標距離
+int rightside_distance;			// 右側物標距離
 int leftside_distance;			// 左側物標距離
 int front_right_distance;		// 右前方物標距離
 int front_left_distance;		// 左前方物標距離
@@ -21,12 +21,15 @@ int front_left_distance;		// 左前方物標距離
 /*------------------------------------------------------------------------------*/
 
 /*==============================================================================*/
-/* 物標距離計測				                               		*/
+/* 物標距離計測									*/
 /* 										*/
 /* 車体前方・左手・右手にある物体との距離を計測する				*/
 /* ---------------------------------------------------------------------------- */
-/*  Arguments:		-						       	*/
-/*  Return   :         	-							*/
+/*  入力:		-							*/
+/*  出力:		rightside_distance	右側物標距離			*/
+/*			leftside_distance	左側物標距離			*/
+/*			front_right_distance	右前方物標距離			*/
+/*			front_left_distance	左前方物標距離			*/
 /*==============================================================================*/
 void distance_recognition(void)
 {
@@ -35,12 +38,12 @@ void distance_recognition(void)
 
 	/* 左前方物標距離計測 */
 	front_left_distance	= get_distance(SENSOR_FL);
-	
+
 	/* 右側物標距離計測 */
-	rightside_dictance	= get_distance(SENSOR_R);
-	
+	rightside_distance	= get_distance(SENSOR_R);
+
 	/* 左側物標距離計測 */
 	leftside_distance	= get_distance(SENSOR_L);
-	
+
 	return;
 }

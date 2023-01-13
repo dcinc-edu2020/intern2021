@@ -1,39 +1,55 @@
 /*==============================================================================*/
-/* Recognition Module C File							*/
+/* Judgement Module C File							*/
 /*==============================================================================*/
 
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "Application/Recognition/distance_recognition.h"
-#include "Application/Recognition/recognition_module.h"
+#include "Application/Judgement/wall_exist_judgement.h"
+#include "Application/Judgement/goal_judgement.h"
+#include "Application/Judgement/run_info_judgement.h"
+#include "Application/Judgement/judgement_module.h"
 
 /*------------------------------------------------------------------------------*/
 /* Function Definitions								*/
 /*------------------------------------------------------------------------------*/
 
 /*==============================================================================*/
-/* 認知コンポーネントグループの初期化						*/
+/* 判断コンポーネントグループの初期化						*/
 /* ---------------------------------------------------------------------------- */
 /*  入力:		-							*/
 /*  出力:		-							*/
 /*==============================================================================*/
-void init_recognition(void)
+void init_judgement(void)
 {
+	init_wall_exist_judgement();
+	init_goal_judgement();
+	init_run_info_judgement();
+
 	return;
 }
 
 /*==============================================================================*/
-/* 認知										*/
-/*										*/
+/* 判断										*/
+/* 										*/
+/* 認知グループから与えられる情報をもとに、マイクロマウスの移動させるための	*/
+/* 出力を制御する先を座標単位で判断する						*/
 /* ---------------------------------------------------------------------------- */
 /*  入力:		-							*/
 /*  出力:		-							*/
 /*==============================================================================*/
-void recognition(void)
+void judgement(void)
 {
-	/* 物標距離計測 */
-	distance_recognition();
+	/* 壁検知 */
+	judgement_existence_right_wall();	// 右壁検知
+	judgement_existence_left_wall();	// 左壁検知
+	judgement_existence_front_wall();	// 前壁検知
+
+	/* ゴール検知 */ 
+	judgement_goal();
+	
+	/* 走行指示情報決定 */
+	judgement_run_info();
 
 	return;
 }

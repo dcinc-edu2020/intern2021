@@ -1,8 +1,8 @@
 /*==============================================================================*/
 /* LED Driver Header File							*/
 /*==============================================================================*/
-#ifndef _LED_DRIVER_H
-#define _LED_DRIVER_H
+#ifndef LED_DRIVER_H
+#define LED_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
@@ -24,7 +24,7 @@
 #define BLED1	(PORTA.PODR.BIT.B3)	// バッテリ電圧表示LED 赤
 
 /* モード表示LEDの表示 */
-#define MODE_LED_PATTERN_1	(1)	// LED0:ON　LED1:OFF　LED2:OFF　LED3:OFF　
+#define MODE_LED_PATTERN_1	(1)	// LED0:ON　LED1:OFF　LED2:OFF　LED3:OFF
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/

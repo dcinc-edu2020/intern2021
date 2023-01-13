@@ -1,12 +1,13 @@
 /*==============================================================================*/
 /* Control Module Header File							*/
 /*==============================================================================*/
-#ifndef _CONTROL_MODULE_H
-#define _CONTROL_MODULE_H
+#ifndef CONTROL_MODULE_H
+#define CONTROL_MODULE_H
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void control(void);	// êßå‰
+void init_control(void);	// èâä˙âª
+void control(void);		// êßå‰
 
 #endif

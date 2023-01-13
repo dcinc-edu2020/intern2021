@@ -1,8 +1,8 @@
 /*==============================================================================*/
 /* Tire Control Header File							*/
 /*==============================================================================*/
-#ifndef _TIRE_CONTROL_H
-#define _TIRE_CONTROL_H
+#ifndef TIRE_CONTROL_H
+#define TIRE_CONTROL_H
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
@@ -18,23 +18,11 @@
 #define TURN_180	(180)	// ターン角度180度
 
 /*------------------------------------------------------------------------------*/
-/* Enum Definitions								*/
-/*------------------------------------------------------------------------------*/
-/* 走行モード */
-enum RUN_MODE{
-	Forward   = 0,	// 前進
-	TurnRight = 1,	// 右旋回
-	TurnLeft  = 2,	// 左旋回
-	Reverse	  = 3,	// 180度旋回
-	Stop      = 4	// 停止
-};
-
-/*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
+void init_tire_control(void);					// タイヤ制御初期化
 void tire_control(void);					// タイヤ制御
 void run_straight(int distance, float target_speed);		// タイヤ制御(直進)
 void run_rotate(int rotate_direction, int rotate_angle);	// タイヤ制御(旋回)
-void set_run_mode(enum RUN_MODE set_run_mode);			// 走行モード設定
 
 #endif

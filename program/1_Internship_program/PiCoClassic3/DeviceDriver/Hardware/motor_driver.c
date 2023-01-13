@@ -5,9 +5,10 @@
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "common.h"
-#include "iodefine.h"
-#include "motor_driver.h"
+#include "DeviceDriver/Core/iodefine.h"
+#include "Platform/timer.h"
+#include "DeviceDriver/Hardware/sensor_driver.h"
+#include "DeviceDriver/Hardware/motor_driver.h"
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
@@ -27,13 +28,13 @@
 /*------------------------------------------------------------------------------*/
 /* Global Variable								*/
 /*------------------------------------------------------------------------------*/
-unsigned int	step_r;			// 右モーターステップ数(割り込み内でカウントアップ)
-unsigned int	step_l;			// 左モーターステップ数(割り込み内でカウントアップ)
-float		accel;			// 加速度(設定値→符号なし)
-float		r_accel;		// 加速度(実際の値→符号あり)
-float		max_speed;		// 最高速度(設定値)
-float		min_speed;		// 最低速度(設定値)
-float		speed;			// 速度(現在の値)
+static unsigned int	step_r;			// 右モーターステップ数(割り込み内でカウントアップ)
+static unsigned int	step_l;			// 左モーターステップ数(割り込み内でカウントアップ)
+static float		accel;			// 加速度(設定値→符号なし)
+static float		r_accel;		// 加速度(実際の値→符号あり)
+static float		max_speed;		// 最高速度(設定値)
+static float		min_speed;		// 最低速度(設定値)
+static float		speed;			// 速度(現在の値)
 
 /*------------------------------------------------------------------------------*/
 /* Function Definitions								*/
@@ -53,9 +54,9 @@ void init_motor(void)
 	speed	= 0;
 	max_speed = MAX_SPEED;
 	min_speed = MIN_SPEED;
-	
+
 	motor_power_off();		// ステッピングモーターを脱力
-	
+
 	return;
 }
 
@@ -71,7 +72,7 @@ void motor_power_on(void)
 {
 	MOT_POWER_ON;	// ステッピングモータを励磁
 	wait_ms(1000);	// 励磁するまで少し待つ
-	
+
 	return;
 }
 
@@ -86,7 +87,7 @@ void motor_power_on(void)
 void motor_power_off(void)
 {
 	MOT_POWER_OFF;	// ステッピングモータを脱力
-	
+
 	return;
 }
 
@@ -101,7 +102,7 @@ void motor_power_off(void)
 void set_motor_direction_r(int motor_direction)
 {
 	MOT_CWCCW_R = motor_direction;	// 右車輪駆動方向
-	
+
 	return;
 }
 
@@ -116,7 +117,7 @@ void set_motor_direction_r(int motor_direction)
 void set_motor_direction_l(int motor_direction)
 {
 	MOT_CWCCW_L = motor_direction;	// 左車輪駆動方向
-	
+
 	return;
 }
 
@@ -128,11 +129,11 @@ void set_motor_direction_l(int motor_direction)
 /*  Return   :         	-							*/
 /*==============================================================================*/
 void reset_motor_step(void)
-{	
+{
 	/* ステッピングモーターのステップ数カウントをリセット */
 	step_r = 0;
 	step_l = 0;
-	
+
 	return;
 }
 /*==============================================================================*/
@@ -148,7 +149,7 @@ void start_motor_control(void)
 	/* モーターのステップ数のカウントスタート */
 	MTU.TSTR.BIT.CST3 = 1;
 	MTU.TSTR.BIT.CST4 = 1;
-	
+
 	return;
 }
 
@@ -165,7 +166,7 @@ void stop_motor_control(void)
 	/* モーターのステップ数のカウントストップ */
 	MTU.TSTR.BIT.CST3 = 0;
 	MTU.TSTR.BIT.CST4 = 0;
-	
+
 	return;
 }
 
@@ -180,7 +181,7 @@ void stop_motor_control(void)
 /*  Return   :         	motor_step	走行距離分走るのに必要なステップ数	*/
 /*==============================================================================*/
 unsigned int get_motor_step(float distance)
-{	
+{
 	/* 走行距離(mm)からステッピングモータのステップ数を算出			*/
 	/*----------------------------------------------------------------------*/
 	/* モーター1回転		： 400 [step]				*/
@@ -190,7 +191,7 @@ unsigned int get_motor_step(float distance)
 	/*				　 　⇒ 0.377[mm]			*/
 	/*----------------------------------------------------------------------*/
 	int motor_step = (400 * (distance) / TIRE_CIRCUIT);
-	
+
 	return motor_step;
 }
 
@@ -205,9 +206,9 @@ unsigned int get_motor_step(float distance)
 unsigned int get_mileage_step(int motor_kind)
 {
 	unsigned int mileage_step = 0;
-	
+
 	/* 走行距離 = 1ステップあたりの走行距離(0.377[mm]) × 現在までのカウントステップ数 */
-	switch(motor_kind)	
+	switch(motor_kind)
 	{
 		case MOTOR_RIGHT:
 			mileage_step = (TIRE_CIRCUIT / 400) * step_r;
@@ -218,7 +219,7 @@ unsigned int get_mileage_step(int motor_kind)
 		default:
 			break;
 	}
-	
+
 	return mileage_step;
 }
 
@@ -232,7 +233,7 @@ unsigned int get_mileage_step(int motor_kind)
 /*==============================================================================*/
 void control_accel(int mileage, float target_speed)
 {
-	/* 減速開始すべき位置に達した場合、加速度をマイナス(減速)に設定する */ 
+	/* 減速開始すべき位置に達した場合、加速度をマイナス(減速)に設定する */
 	if((mileage - STEP2LEN(step_r + step_l) ) < ( ( (target_speed * target_speed) - (speed * speed) ) / (-2*1000*accel) ))
 	{
 		r_accel = -accel;	// 減速開始
@@ -241,7 +242,7 @@ void control_accel(int mileage, float target_speed)
 	{
 		r_accel = accel;
 	}
-	
+
 	return;
 }
 /*==============================================================================*/
@@ -254,7 +255,7 @@ void control_accel(int mileage, float target_speed)
 /*==============================================================================*/
 void control_accel_turn(int mileage, float target_speed)
 {
-	/* 減速開始すべき位置に達した場合、加速度をマイナス(減速)に設定する */ 
+	/* 減速開始すべき位置に達した場合、加速度をマイナス(減速)に設定する */
 	if((mileage - STEP2LEN(step_r + step_l) ) < ( ( (target_speed * target_speed) - (speed * speed) ) / (-2*1000*TURN_ACCEL) ))
 	{
 		r_accel = -TURN_ACCEL;	// 減速開始
@@ -263,22 +264,20 @@ void control_accel_turn(int mileage, float target_speed)
 	{
 		r_accel = TURN_ACCEL;
 	}
-	
+
 	return;
 }
 
 /*==============================================================================*/
-/* 現在速度設定									*/
+/* 現在速度取得									*/
 /* 										*/
 /* ---------------------------------------------------------------------------- */
-/*  Arguments:		set_speed		速度 [mm/sec]			*/
-/*  Return   :         	-							*/
+/*  Arguments:		-							*/
+/*  Return   :		speed			速度 [mm/sec]			*/
 /*==============================================================================*/
-void set_current_speed(float set_speed)
+float get_current_speed(void)
 {
-	speed = set_speed;
-	
-	return;
+	return speed;
 }
 /*==============================================================================*/
 /* 最高速度設定									*/
@@ -290,7 +289,7 @@ void set_current_speed(float set_speed)
 void set_max_speed(float set_speed)
 {
 	max_speed = set_speed;
-	
+
 	return;
 }
 /*==============================================================================*/
@@ -303,7 +302,7 @@ void set_max_speed(float set_speed)
 void set_min_speed(float set_speed)
 {
 	min_speed = set_speed;
-	
+
 	return;
 }
 
@@ -317,10 +316,109 @@ void set_min_speed(float set_speed)
 void set_r_accel(float set_accel)
 {
 	r_accel = set_accel;
-	
+
 	return;
 }
 
+/*==============================================================================*/
+/*  姿勢制御用割り込み(CMT0)	           		                        */
+/* 										*/
+/* ---------------------------------------------------------------------------- */
+/*  Arguments:		-						       	*/
+/*  Return   :         	-							*/
+/*==============================================================================*/
+void int_periodic_motor(void)
+{
+	float spd_r, spd_l;			// 最終的な速度
+
+	speed+=r_accel; 			// 加速処理
+
+	if(speed > max_speed)			// 最高速度を制限
+	{
+		speed = max_speed;
+	}
 
 
+	if(speed < min_speed)			// 最低速度を制限
+	{
+		speed = min_speed;
+	}
 
+
+	// センサ制御
+	if(con_wall.enable == true)				// 壁制御が許可されているかチェック
+	{
+
+		con_wall.p_error = con_wall.error;			// 過去の偏差を保存
+
+		// 左右のセンサが、それぞれ使える状態であるかどうかチェックして、姿勢制御の偏差を計算
+		if( ( sen_r.is_control == true ) && ( sen_l.is_control == true ) )
+		{												// 両方とも有効だった場合の偏差を計算
+			con_wall.error = sen_r.error - sen_l.error;
+		}
+		else												// 片方もしくは両方のセンサが無効だった場合の偏差を計算
+		{
+			con_wall.error = 2.0 * (sen_r.error - sen_l.error);	// 片方しか使用しないので2倍する
+		}
+
+
+		// DI制御計算
+		con_wall.diff = con_wall.error - con_wall.p_error;	// 偏差の微分値を計算
+		con_wall.sum += con_wall.error;					// 偏差の積分値を計算
+
+		if(con_wall.sum > con_wall.sum_max)				// 偏差の積分値の最大値を制限
+		{
+			con_wall.sum = con_wall.sum_max;
+		}
+		else if(con_wall.sum < (-con_wall.sum_max))			// 偏差の積分値の最低値を制限
+		{
+			con_wall.sum = -con_wall.sum_max;
+		}
+
+		con_wall.control = 0.001 * speed * con_wall.kp * con_wall.error;	// 制御量を計算
+
+		spd_r = speed + con_wall.control;					// 制御を左右モータの速度差という形で反映
+		spd_l = speed - con_wall.control;					// 制御を左右モータの速度差という形で反映
+
+	}
+	else
+	{
+		spd_r = speed;
+		spd_l = speed;
+	}
+
+	if(spd_r < MIN_SPEED)spd_r = MIN_SPEED;
+	if(spd_l < MIN_SPEED)spd_l = MIN_SPEED;
+
+	MTU3.TGRC = SPEED2GREG(spd_r);			// 右速度(mm/s)からジェネラルレジスタの値に変換して、バッファレジスタに代入
+	MTU4.TGRC = SPEED2GREG(spd_l);			// 左速度(mm/s)からジェネラルレジスタの値に変換して、バッファレジスタに代入
+
+}
+
+/*==============================================================================*/
+/* 右モーターステップカウント割り込み(MTU3)					*/
+/* 										*/
+/* 右モータが１ステップ進む毎の割り込み						*/
+/* ---------------------------------------------------------------------------- */
+/*  Arguments:		-						       	*/
+/*  Return   :         	-							*/
+/*==============================================================================*/
+void int_mot_r(void)
+{
+	step_r++;	// ステップ数をカウント
+	return;
+}
+
+/*==============================================================================*/
+/* 左モーターステップカウント割り込み(MTU4)					*/
+/* 										*/
+/* 左モータが１ステップ進む毎の割り込み						*/
+/* ---------------------------------------------------------------------------- */
+/*  Arguments:		-						       	*/
+/*  Return   :         	-							*/
+/*==============================================================================*/
+void int_mot_l(void)
+{
+	step_l++;	// ステップ数をカウント
+	return;
+}

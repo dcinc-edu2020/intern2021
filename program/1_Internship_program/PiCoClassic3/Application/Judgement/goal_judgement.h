@@ -1,20 +1,25 @@
 /*==============================================================================*/
-/* Distance Recognition Header File						*/
+/* Goal Judgement Header File							*/
 /*==============================================================================*/
-#ifndef DISTANCE_RECOGNITION_H
-#define DISTANCE_RECOGNITION_H
+#ifndef GOAL_JUDGEMENT_H
+#define GOAL_JUDGEMENT_H
 
 /*------------------------------------------------------------------------------*/
-/* Externs Variable								*/
+/* Defines									*/
 /*------------------------------------------------------------------------------*/
-extern int rightside_distance;			// 右側物標距離
-extern int leftside_distance;			// 左側物標距離
-extern int front_right_distance;		// 右前方物標距離
-extern int front_left_distance;			// 左前方物標距離
+/* ゴール判定結果 */
+#define	GOAL	(0)	// ゴール
+#define	NO_GOAL	(1)	// ゴールでない
+
+/*------------------------------------------------------------------------------*/
+/* Global Variable								*/
+/*------------------------------------------------------------------------------*/
+extern int goal_judgement_result;		// ゴール判定結果
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void distance_recognition(void);		// 物標距離計測
+void init_goal_judgement(void);	// 初期化
+void judgement_goal(void);	// ゴール検知
 
 #endif

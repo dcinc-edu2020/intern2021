@@ -1,8 +1,8 @@
 /*==============================================================================*/
 /* Sesor Driver Header File							*/
 /*==============================================================================*/
-#ifndef _SENSOR_DRIVER_H
-#define _SENSOR_DRIVER_H
+#ifndef SENSOR_DRIVER_H
+#define SENSOR_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
@@ -86,5 +86,6 @@ void init_sensor(void);			// センサーパラメータ初期化
 int get_distance(int sensor_kind);	// 物標距離取得
 void set_pid_enable(void);		// PID制御有効化設定
 void set_pid_disable(void);		// PID制御無効化設定
+void int_periodic_sensor(void);		// センサー読み込み用割り込み
 
 #endif

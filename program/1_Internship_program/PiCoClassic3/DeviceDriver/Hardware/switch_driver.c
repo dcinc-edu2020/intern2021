@@ -5,8 +5,8 @@
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "iodefine.h"
-#include "switch_driver.h"
+#include "DeviceDriver/Core/iodefine.h"
+#include "DeviceDriver/Hardware/switch_driver.h"
 
 /*------------------------------------------------------------------------------*/
 /* Function Definitions								*/
@@ -23,7 +23,7 @@
 int get_switch_state(int switch_kind)
 {
 	int switch_state = SW_OFF;
-	
+
 	switch(switch_kind)
 	{
 		case MODE_SW_RED:
@@ -38,6 +38,6 @@ int get_switch_state(int switch_kind)
 		default:
 			break;
 	}
-	
+
 	return switch_state;
 }
