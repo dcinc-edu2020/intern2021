@@ -1,8 +1,4 @@
 # 接続手順書
-- [接続手順書](#接続手順書)
-  - [開発用PCへ接続する](#開発用pcへ接続する)
-  - [開発を始める](#開発を始める)
-  - [開発用PC以外からプログラムや設計書を参照する(読み取り専用)](#開発用pc以外からプログラムや設計書を参照する読み取り専用)
 
 ## 開発用PCへ接続する
 <details>
@@ -87,34 +83,3 @@
   ![Macリモートデスクトップ接続](img/mac_remote8.png)
 </details>
 
-## 開発を始める
-
-1. チームメンバに開発用PCの画面を共有して進めましょう。
-
-1. 開発用PCでSlackを起動する。  
-  Zoomのブレークアウトルームに移動後の、社員との連絡手段として使用します。  
-  アカウント・ワークスペース設定済みとなっています。
-
-1. 開発用PCのデスクトップにある「Z」のリンクを開き、  
-   「1_マイクロマウス開発手順書.pdf」を開きます。  
-
-1. 手順書を参考に、プログラム開発に入りましょう。
-
-* (参考)PCには以下ツールが入っています。
-  * マイクロマウス用コンパイラ(CS+)・・・マイクロマウス用プログラムのコンパイラ
-  * 次世代設計ツール NextDesign (デンソークリエイト製ツール)・・・設計書のエディタ
-
-## 開発用PC以外からプログラムや設計書を参照する(読み取り専用)
-* 開発用PCに格納されているファイルは以下です。  
-  以下のリンクは、開発用PC以外(各自のPC)からでも開くことができます。
-
-  |格納ファイルフォルダ名|用途|内容|
-  |-|-|-|
-  |[Z:\1-1_マイクロマウス開発手順書.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-1_マイクロマウス開発手順書.pdf)|1 ゴール停止|プログラムの開発の流れ|
-  |[Z:\1_設計書\MicroMouse1.iproj](https://dcincedu.github.io/intern/doc/design/MicroMouse1/index.html)|1 ゴール停止|マイクロマウス用プログラムの設計書|
-  |[Z:\1_Internship_program](https://github.com/dcincedu/intern/tree/master/program/1_Internship_program)|1 ゴール停止|マイクロマウス用プログラム|
-  |[Z:\1-2_ゴール時停止で使う主なC言語文法.pdf](https://github.com/dcincedu/intern/blob/master/doc/build/1-2_ゴール時停止で使う主なC言語文法.pdf)|1 ゴール停止|ごく簡単なC言語文法資料|
-  
-
-* 走行デモ動画
-  * https://github.com/dcincedu/intern/tree/master/doc/movie
